@@ -182,7 +182,8 @@ POSTS = {
     me a present. I opened the present and it was a Dragotchi.
     <IMG src=http://www.geocities.c om/img/happyhappy.gif>
     I love new toys
-    <P>He told me a funny joke. It goes like
+    <P>He told me a funny joke.
+    <IMG SRC=/smiley/jokes2.gif> It goes like
     [an error occured while processing this directive]
     <IMG SRC=/smiley/haha2.gif><IMG SRC=/smiley/haha2.gif>
     Smaug is so funny!

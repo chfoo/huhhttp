@@ -574,6 +574,14 @@ class SmileyHandler(SiteHandler):
         yield from self.write(b'Content-Length: 0\r\n\r\n')
 
     @asyncio.coroutine
+    def _big_header(self):
+        yield from self.write(b'HTTP/1.0 200\r\n')
+        for dummy in range(100):
+            yield from self.write(b'A' * 10000)
+        yield from self.write(b': A\r\n')
+        yield from self.write(b'Content-Length: 0\r\n\r\n')
+
+    @asyncio.coroutine
     def process(self):
         func_map = {
             'happy3': self._messy_chunked,
@@ -588,6 +596,7 @@ class SmileyHandler(SiteHandler):
             'happy1': self._bad_http_redirect,
             'bounce1': self._redirect_1,
             'bounce2': self._redirect_2,
+            'jokes2': self._big_header,
         }
 
         func = func_map.get(self.match.group(1).decode('ascii', 'replace'))

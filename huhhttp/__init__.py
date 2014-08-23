@@ -1,3 +1,3 @@
 '''An evil web server.'''
 
-__version__ = '1.0'
+__version__ = '1.1'
