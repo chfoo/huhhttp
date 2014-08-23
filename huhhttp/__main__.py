@@ -3,6 +3,7 @@ import asyncio
 import logging
 import time
 
+import huhhttp
 from huhhttp.fuzz import Fuzzer
 from huhhttp.site import SiteServer
 
@@ -23,7 +24,8 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     fuzzer = Fuzzer(seed=args.seed, period=args.fuzz_period)
-    _logger.info('Seed %s, Period %s, Interval %s',
+    _logger.info('Version %s, Seed %s, Period %s, Interval %s',
+                 huhhttp.__version__,
                  args.seed, args.fuzz_period, args.restart_interval)
 
     while True:
