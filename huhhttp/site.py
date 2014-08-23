@@ -212,7 +212,7 @@ class ImagesHandler(SiteHandler):
         content_type = self.EXTENSION_MAP.get(
             extension, 'text/html').encode('ascii')
 
-        if os.path.exists(path):
+        if os.path.isfile(path):
             before_date_tuple = email.utils.parsedate(
                 self.request.fields.get(b'If-Modified-Since', b'')
                 .decode('ascii', 'replace'))
