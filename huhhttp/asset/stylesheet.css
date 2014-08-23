@@ -1,0 +1,44 @@
+/* */
+@import url('stylesheet1.css');
+@import 'stylesheet2.css';
+@import "stylesheet3.css";
+
+body {
+	background-color: black;
+	background-image: url("images/dragon.bmp"), url(texture.bmp);
+	font-size: 1em;
+	font-color: blue;
+	color: white;
+	font-family: 'Comic Sans Ms', 'Trebuchet Ms', comic, fantasy, sans-serif, sans;
+}
+
+.button {
+	background: url("button.bmp");
+	background-size: 100% 100%;
+	font-size: 1.5em;
+	padding:  0.5em;
+	display: inline-block;
+}
+
+a:link {
+	color: cyan;
+}
+
+a:active, a:hover {
+	color: pink;
+	font-weight: bold;
+}
+
+a:visited {
+	color: magenta;
+}
+
+.calendar tr td a {
+	width: 2em;
+	display: inline-block;
+}
+
+#Recent_Posts {
+	float: right;
+	max-width: 5em;
+}

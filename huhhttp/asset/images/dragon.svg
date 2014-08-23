@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="dragon.svg"
+   inkscape:export-filename="/home/chris/data-chris-aspire-5741/Documents/programming/huhhttp/huhhttp/asset/images/dragon.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 32 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="64 : 32 : 1"
+       inkscape:persp3d-origin="32 : 21.333333 : 1"
+       id="perspective3860" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8"
+     inkscape:cx="43.074872"
+     inkscape:cy="30.736923"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1867"
+     inkscape:window-height="1056"
+     inkscape:window-x="53"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3848"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       color="#00ffff"
+       opacity="0.1254902"
+       empcolor="#00ffff"
+       empopacity="0.25098039" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:description>I know this is the dragon skull from How To Train Your Dragon 2, but the &quot;author&quot; doesn't :)</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-988.36218)">
+    <path
+       style="fill:#2e3436;fill-opacity:1;stroke:none"
+       d="m 55.518291,1016.7035 c 0,8.7868 -11.258226,2.7094 -23.46211,2.7094 -12.203885,0 -20.732065,6.0774 -20.732065,-2.7094 0,-8.7868 9.893203,-15.9099 22.097088,-15.9099 12.203884,0 22.097087,7.1231 22.097087,15.9099 z"
+       id="path3783"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss" />
+    <path
+       style="fill:#2e3436;fill-opacity:1;stroke:none"
+       d="M 25.704269,994.01171 C 12.432313,993.28331 7.54545,1003.177 7.54545,1012.7549 c 0,8.8695 5.303913,9.6584 12.248555,11.4583 -3.182349,-4.1415 -5.287682,-3.7178 -5.287682,-10.5696 -1.754064,-12.0458 5.345506,-17.7251 11.197946,-19.63189 z"
+       id="path3785"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:none"
+       id="path3819"
+       sodipodi:cx="-10.054235"
+       sodipodi:cy="14.130995"
+       sodipodi:rx="4.9600892"
+       sodipodi:ry="4.9600892"
+       d="m -5.0941463,14.130995 a 4.9600892,4.9600892 0 1 1 -9.9201787,0 4.9600892,4.9600892 0 1 1 9.9201787,0 z"
+       transform="matrix(0.73648649,0,0,0.73648649,30.461547,1001.8784)" />
+    <path
+       style="fill:#2e3436;fill-opacity:1;stroke:none"
+       d="m 12.726464,1020.72 c 1.886387,3.9764 3.50779,9.4533 6.174617,9.4415 3.227801,-0.014 4.273471,-8.0062 6.872016,-7.9781 2.219879,0.024 3.308538,7.0617 6.737959,7.9111 3.121658,0.7731 3.958163,-7.9817 7.006071,-7.7771 2.504468,0.1681 3.232187,8.2016 6.40282,8.0117 2.35091,-0.1408 3.506141,-4.1011 5.699021,-7.8106 l -5.028739,-4.2578 -26.951838,0 z"
+       id="path3850"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssscccc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3785"
+       id="use3854"
+       transform="matrix(-1,0,0,1,65.993492,-0.2010847)"
+       width="64"
+       height="64"
+       style="fill:#2e3436" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3819"
+       id="use3864"
+       transform="translate(20.577668,0.2010847)"
+       width="64"
+       height="64"
+       style="fill:#000000;fill-opacity:1" />
+    <path
+       style="fill:#2e3436;fill-opacity:1;stroke:none"
+       d="m 24.095676,1040.6215 c 1.22137,0 7.026731,-4.3696 8.387587,-4.3696 1.482935,0 6.858586,4.5706 8.677444,4.5706 1.517366,0 3.734966,-4.1775 5.094145,-4.1775 0.76012,0 2.735726,2.5391 2.010847,4.8932 -0.875953,2.8447 -11.861372,4.4183 -15.626635,4.4183 -4.27548,0 -15.49523,-1.7434 -15.876635,-4.4184 -0.272922,-1.9141 0.887452,-4.6919 2.077876,-4.6919 1.381167,0 3.770403,3.7753 5.255371,3.7753 z"
+       id="path3866"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssss" />
+  </g>
+</svg>
