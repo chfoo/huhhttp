@@ -207,6 +207,9 @@ class ImagesHandler(SiteHandler):
             filename = 'songofsmaug.ogg'
 
         path = os.path.join(self.ASSET_DIR, filename)
+        if not path.startswith(self.ASSET_DIR):
+            raise Exception('Paths not matching')
+
         extension = os.path.splitext(path)[1]
 
         content_type = self.EXTENSION_MAP.get(
