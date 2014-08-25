@@ -175,6 +175,20 @@ class SiteHandler(FuzzHandler):
 
         return ''.join(text)
 
+    def all_posts(self):
+        text = []
+
+        for date in POST_KEYS:
+            post = POSTS[date]
+            text.append(
+                '<LI><A HREF="wirdpress/post/{}/{}/{}/{}">{}</A>'
+                .format(date[0], date[1], date[2],
+                        post_content_to_url_slug(post),
+                        post[:60])
+            )
+
+        return ''.join(text)
+
 
 class SmokeTestHandler(SiteHandler):
     @asyncio.coroutine
@@ -478,6 +492,14 @@ class PostHandler(SiteHandler):
             pass
 
 
+class AllPostsHandler(SiteHandler):
+    def get_title(self):
+        return 'All Smaug ghosts.'
+
+    def get_body(self):
+        return self.all_posts()
+
+
 class DQueryMaxHandler(SiteHandler):
     @asyncio.coroutine
     def process(self):
@@ -668,6 +690,7 @@ HANDLERS = [
     (br'/images/dquery-max\.js', DQueryMaxHandler),
     (br'/images/(.*)', ImagesHandler),
     (br'/wirdpress/post/(\d{4})/(\d{1,2})/(\d{1,2})/(.*)', PostHandler),
+    (br'/wirdpress/post/all/posts', AllPostsHandler),
     (br'/wirdpress/page/web_ring', WebRingPageHandler),
     (br'/wirdpress/calendar/(\d{4})/(\d{1,2})/(\d{1,2})/', CalendarHandler),
     (br'/smiley/(\w+)\.gif', SmileyHandler),

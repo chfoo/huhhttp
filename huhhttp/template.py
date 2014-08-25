@@ -13,7 +13,8 @@ SITE_TEMPLATE = '''{doctype}
     <! Powered by HuhHTTP >
     <BODY>
         {banner}
-        <DIV ID=Recent_Posts>Recent Pots: {recent_posts}</DIV>
+        <DIV ID=Recent_Posts>Recent Pots: {recent_posts} <HR>
+        <A HREF = /wirdpress/post/all/posts>ALL Posts</A></DIV>
         {body}
     </BODY>
     <!--
