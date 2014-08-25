@@ -243,7 +243,15 @@ POSTS = {
     <P>I will take it is a joke about my birthday when he gets here at
     my house. He will be very silly!
     <IMG SRC="http://geocities.c om/img/gift23.gif">
-    <IMG SRC="http://geocities.c om/img/surpise3.gif">
+    <A ID=surprise_link HREF="/smiley/surprise.gif">
+    <IMG ID=surprise_img SRC="http://geocities.c om/img/surpise3.gif"></A>
+    <SCRIPT>function surprise() {
+    document.title = '🔥🔥🔥🔥🔥';;;//?
+    document.getElementById('surprise_img').src =
+        document.getElementById('surprise_link').href;
+    }
+    setTimeout(surprise, 2000);
+    </SCRIPT>
     <P>
     ''',
     (1997, 4, 22): '''

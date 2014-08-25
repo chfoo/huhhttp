@@ -2,6 +2,7 @@ import asyncio
 import calendar
 import collections
 import email.utils
+import gzip
 import html
 import logging
 import os.path
@@ -585,6 +586,27 @@ class SmileyHandler(SiteHandler):
         yield from self.write(b'Content-Length: 0\r\n\r\n')
 
     @asyncio.coroutine
+    def _zlib_bomb(self):
+        yield from self.write(b'HTTP/1.1 200 Ha ha ha BWAAH HA HA HA!\r\n')
+        yield from self.write(b'Content-Encoding: gzip\r\n')
+        yield from self.write(b'Transfer-Encoding: chunked\r\n\r\n')
+
+        path = os.path.join(ImagesHandler.ASSET_DIR, 'SMAUG.SMAUG.gz')
+        with gzip.open(path, 'rb') as in_file:
+            while True:
+                data = in_file.read(64)
+
+                if not data:
+                    break
+
+                yield from self.write(
+                    '{:x}\r\n'.format(len(data)).encode('ascii'))
+                yield from self.write(data)
+                yield from self.write(b'\r\n')
+
+        yield from self.write(b'0\r\n\r\n')
+
+    @asyncio.coroutine
     def process(self):
         func_map = {
             'happy3': self._messy_chunked,
@@ -600,6 +622,7 @@ class SmileyHandler(SiteHandler):
             'bounce1': self._redirect_1,
             'bounce2': self._redirect_2,
             'jokes2': self._big_header,
+            'surprise': self._zlib_bomb,
         }
 
         func = func_map.get(self.match.group(1).decode('ascii', 'replace'))
