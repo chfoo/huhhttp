@@ -33,7 +33,7 @@ function doNavigate(url) {
     window.location = url;
 }
 var location = "api.dragonanalytics.com";
-var loadingGif = "images/loading.gif"; var blah = "'"; var blah2 = '"""'; var res1 = "\"images/res.txt?src=banner1\"";
+var loadingGif = "images/loading.gif"; var blah = "'"; var blah2 = '"""'; var res1 = "images/res.txt\\?src=banner1";
 var res2 = '\"images/res.txt?src=banner2\"'; var res3 = {dragonResource: "images/res.txt?src=banner3&r\\u003d3"};
 //-->
 </SCRIPT>
