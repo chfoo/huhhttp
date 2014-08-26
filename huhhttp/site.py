@@ -7,6 +7,8 @@ import html
 import logging
 import os.path
 import re
+import socket
+import struct
 import time
 import urllib.parse
 
@@ -25,12 +27,91 @@ from huhhttp.template import SITE_TEMPLATE, BANNER_NAV, INDEX_CONTENT, \
 _logger = logging.getLogger(__name__)
 
 
+class FuzzReaderWrapper(object):
+    def __init__(self, reader, writer, fuzzer):
+        self._reader = reader
+        self._writer = writer
+        self._fuzzer = fuzzer
+        self._fuzz = None
+        self._ready_to_fuzz = False
+
+    def __getattr__(self, key):
+        return getattr(self._reader, key)
+
+    @property
+    def fuzz_session(self):
+        return self._fuzz
+
+    @asyncio.coroutine
+    def read(self, length=-1):
+        if not (yield from self._fuzz_read()):
+            return (yield from self._reader.read(length))
+        else:
+            return b''
+
+    @asyncio.coroutine
+    def readline(self):
+        if not (yield from self._fuzz_read()):
+            return (yield from self._reader.readline())
+        else:
+            return b''
+
+    @asyncio.coroutine
+    def _fuzz_read(self):
+        if not self._fuzz and self._ready_to_fuzz:
+            self._new_fuzz_session()
+        elif not self._fuzz:
+            self._ready_to_fuzz = True
+            return
+
+        hang_time = self._fuzz.hang_time()
+        connection_action = self._fuzz.connection_action()
+
+        if hang_time:
+            yield from asyncio.sleep(hang_time)
+
+        if connection_action == ConnectionAction.close:
+            self.close()
+            return True
+        elif connection_action == ConnectionAction.reset:
+            self.reset_connection()
+            return True
+
+    def close(self):
+        self._writer.close()
+
+    def reset_connection(self):
+        # http://stackoverflow.com/a/6440364/1524507
+        sock = self._writer.get_extra_info('socket')
+        l_onoff = 1
+        l_linger = 0
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_LINGER,
+                        struct.pack('ii', l_onoff, l_linger))
+        sock.close()
+        self._writer.close()
+
+    def _new_fuzz_session(self):
+        assert not self._fuzz
+        fuzz_session = self._fuzzer.session()
+        _logger.info('Fuzz session: counter=%d threshold=%.04f',
+                     self._fuzzer.counter, fuzz_session.threshold)
+        self._fuzz = fuzz_session
+
+
 class SiteServer(Server):
     def __init__(self, fuzzer, restart_interval=10000):
         super().__init__(HANDLERS)
         self.fuzzer = fuzzer
         self.restart_interval = restart_interval
         self.asyncio_server = None
+
+    @asyncio.coroutine
+    def _process_request(self, reader, writer):
+        wrapper = FuzzReaderWrapper(reader, writer, self.fuzzer)
+        request = yield from super()._process_request(wrapper, writer)
+
+        request.fuzz_session = wrapper.fuzz_session
+        return request
 
 
 class FuzzHandler(Handler):
@@ -46,9 +127,13 @@ class FuzzHandler(Handler):
                 asyncio.get_event_loop().stop()
                 raise StopProcessing()
 
-        self._fuzz = self.server.fuzzer.session()
-        _logger.info('Fuzz session: counter=%d threshold=%.04f',
-                     self.server.fuzzer.counter, self._fuzz.threshold)
+        _logger.info('Request: %s %s',
+                     '{0[0]}:{0[1]}'.format(
+                         self.writer.get_extra_info('socket').getpeername()),
+                     self.match.string
+                     )
+
+        self._fuzz = self.request.fuzz_session
 
         accept_encoding = self.request.fields.get(b'Accept-Encoding', b'')
         self._compress_type = self._fuzz.compress_type(

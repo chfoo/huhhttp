@@ -13,6 +13,10 @@ class ProtocolError(ValueError):
     pass
 
 
+class CloseConnection(ValueError):
+    pass
+
+
 class Server(object):
     def __init__(self, handlers=None):
         self.handlers = handlers or []
@@ -20,7 +24,8 @@ class Server(object):
     def __call__(self, reader, writer):
         while True:
             try:
-                close = yield from self._process_request(reader, writer)
+                request = yield from self._process_request(reader, writer)
+                yield from self._dispatch(reader, writer, request)
             except ProtocolError as error:
                 _logger.info('Client error %s', error)
                 writer.write(b'HTTP/1.1 400 ')
@@ -29,14 +34,16 @@ class Server(object):
                 writer.write(error.args[0].encode('ascii'))
                 writer.close()
                 return
+            except CloseConnection:
+                writer.close()
+                return
+            except ConnectionError:
+                writer.close()
+                return
             except Exception:
                 _logger.exception('Server error.')
                 writer.close()
                 return
-            else:
-                if close:
-                    writer.close()
-                    return
 
     @asyncio.coroutine
     def _process_request(self, reader, writer):
@@ -48,8 +55,7 @@ class Server(object):
             _logger.debug('Got line %s', line)
 
             if line[-1:] != b'\n':
-                writer.close()
-                return True
+                raise CloseConnection()
 
             if not line.strip():
                 break
@@ -91,7 +97,7 @@ class Server(object):
 
             request.payload.seek(0)
 
-        return (yield from self._dispatch(reader, writer, request))
+        return request
 
     @asyncio.coroutine
     def _dispatch(self, reader, writer, request):
