@@ -14,6 +14,7 @@ POSTS = {
     <IMG SRC="smiley/dancing4.gif"/>
     <IMG SRC="smiley/dancing4.gif"/>
     <IMG SRC="smiley/dancing4.gif"/>
+    <IMG SRC="smiley/welcome4.gif"/>
     ''',
     (1997, 2, 13): '''
     <P>~Welcome back!
@@ -132,7 +133,7 @@ POSTS = {
     <P>I do not know how the words get into my web site. I asked Smaug
     and Smaug will get help me keep them out my Web Site.
     <P><<IMG SRC="http://anglefire.c/xxxCuttie3xxx/uhoh.bmp">
-    <P>
+    <P><IMG SRC="smiley/confused3.gif"/>
     ''',
     (1997, 3, 16): '''
     <p>Heh, the memories. <i>You were very weird.</i><p>
