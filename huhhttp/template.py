@@ -69,11 +69,14 @@ for (var i = 0; i < 5; i++)
 </NOSCRIPT>
 <OBJECT codebase="/images/" data="RealPlayer.exe" ARCHIVE="songofsmaug.ogg songofsmaug_remix.ogg">
     <PARAM NAME="url" VAlUETYPE="ref" VALUE="songofsmaug.html">
+    <PARAM NAME="url" VAlUETYPE="ref" VALUE="../../../../../../">
 </OBJECT>
 <AUDIO AUTOPLAY>
     <SOURCE SRC="/images/songofsmaug_hi.ogg">
     <BGSOUND SRC="./images/../images/../images/songofsmaug_low.ogg">
 </AUDIO>
+<OBJECT CODEBASE='mailto:SPACE_DRAGON@SPACE_DRAGON.DRAGON' DATA=file://C:\Windows\FakePlayer.exe></OBJECT>
+<OBJECT CODEBASE='dragon\x00' DATA=&nbsp;></OBJECT>
 '''
 
 SIMPLE_404 = '''
@@ -109,7 +112,7 @@ CALENDAR_TEMPLATE = '''
 '''
 
 WEB_RING_CONTENT = '''
-<FONT SIZE=BIG>Web ring</FONT>
+<FONT SIZE=BIG>Web ring<IMG src=smiley/cool4.gif></FONT>
 <BR>
 <A HREF=google.com>Hotdragonmail.com: Email for Dragons</A>
 <BR>

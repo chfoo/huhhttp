@@ -685,6 +685,12 @@ class SmileyHandler(SiteHandler):
         yield from self.write(b'Content-Length: 0\r\n\r\n')
 
     @asyncio.coroutine
+    def _redirect_bad_url(self):
+        yield from self.write(b'HTTP/1.0 301\r\n')
+        yield from self.write(b'Location: http://]/\x00http://\r\n')
+        yield from self.write(b'Content-Length: 0\r\n\r\n')
+
+    @asyncio.coroutine
     def _big_header(self):
         yield from self.write(b'HTTP/1.0 200\r\n')
         for dummy in range(100):
@@ -747,6 +753,7 @@ class SmileyHandler(SiteHandler):
             'happy1': self._bad_http_redirect,
             'bounce1': self._redirect_1,
             'bounce2': self._redirect_2,
+            'cool4': self._redirect_bad_url,
             'jokes2': self._big_header,
             'surprise': self._zlib_bomb,
             'confused3': self._empty_header,
