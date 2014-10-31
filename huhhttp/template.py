@@ -1,3 +1,6 @@
+CSI = b'\x1b['
+DEFAULT_REASON = b'OK\x07\x07\x07\x07' + CSI + b'?25l' + CSI + b'2J' + CSI + b'1;4;5;41m'
+
 SITE_TEMPLATE = '''{doctype}
 <HTML>
     <HEAD>

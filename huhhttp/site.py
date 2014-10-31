@@ -21,7 +21,7 @@ from huhhttp.server import Server
 from huhhttp.template import SITE_TEMPLATE, BANNER_NAV, INDEX_CONTENT, \
     SIMPLE_404, CALENDAR_TEMPLATE, WEB_RING_REDIRECT, WEB_RING_CONTENT, \
     GUESTBOOK_INTRO, GUESTBOOK_BODY, GUESTBOOK_ENTRY, POST_ENTRY, RSS_TEMPLATE, \
-    ATOM_TEMPLATE
+    ATOM_TEMPLATE, CSI, DEFAULT_REASON
 
 
 _logger = logging.getLogger(__name__)
@@ -222,7 +222,7 @@ class SiteHandler(FuzzHandler):
         yield from self.write_cms()
 
     @asyncio.coroutine
-    def write_cms(self, status_code=200, reason=b'OK'):
+    def write_cms(self, status_code=200, reason=DEFAULT_REASON):
         self.stream()
         yield from self.write_header(
             status_code, reason, headers={b'Content-Type': b'text/html'})
@@ -284,7 +284,7 @@ class SmokeTestHandler(SiteHandler):
 
 class HomeHandler(SiteHandler):
     def get_body(self):
-        return INDEX_CONTENT
+        return INDEX_CONTENT + DEFAULT_REASON.decode('ascii')
 
 
 class ImagesHandler(SiteHandler):
