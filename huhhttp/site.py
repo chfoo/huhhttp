@@ -650,6 +650,7 @@ class SmileyHandler(SiteHandler):
         yield from self.write(b'Set-Cookie: \x00?#?+:%ff=hope you have '
                               b'cookies enabled!; expires=Dog\r\n' * 1000)
         yield from self.write(b'Content-Length: -12\r\n')
+        yield from self.write(b'Set-Cookie: SMAUGYO')
 
     @asyncio.coroutine
     def _bad_content_length(self):

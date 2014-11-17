@@ -117,7 +117,7 @@ CALENDAR_TEMPLATE = '''
 WEB_RING_CONTENT = '''
 <FONT SIZE=BIG>Web ring<IMG src=smiley/cool4.gif></FONT>
 <BR>
-<A HREF=google.com>Hotdragonmail.com: Email for Dragons</A>
+<A HREF=hotmailmicrosoftyahoogooglemsnaolircskypeichatitalkiyapitypeidontcareanymoregooglemail.com>Hotdragonmail.com: Email for Dragons</A>
 <BR>
 <A HREF=http://middle.earth/>Middle Earth Tours. Places to avoid for humans because of dragons. </A>
 <BR>
