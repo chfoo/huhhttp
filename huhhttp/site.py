@@ -21,7 +21,7 @@ from huhhttp.server import Server
 from huhhttp.template import SITE_TEMPLATE, BANNER_NAV, INDEX_CONTENT, \
     SIMPLE_404, CALENDAR_TEMPLATE, WEB_RING_REDIRECT, WEB_RING_CONTENT, \
     GUESTBOOK_INTRO, GUESTBOOK_BODY, GUESTBOOK_ENTRY, POST_ENTRY, RSS_TEMPLATE, \
-    ATOM_TEMPLATE, CSI, DEFAULT_REASON
+    ATOM_TEMPLATE, CSI, DEFAULT_REASON, OSC
 
 
 _logger = logging.getLogger(__name__)
@@ -225,7 +225,11 @@ class SiteHandler(FuzzHandler):
     def write_cms(self, status_code=200, reason=DEFAULT_REASON):
         self.stream()
         yield from self.write_header(
-            status_code, reason, headers={b'Content-Type': b'text/html'})
+            status_code, reason,
+            headers={
+                b'Content-Type': b'text/html',
+                b'X-Dragon': OSC + b'2;Smaug was here!\x07'
+            })
         yield from self.write_content(self.format_template())
 
     def format_template(self):

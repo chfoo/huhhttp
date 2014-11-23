@@ -1,4 +1,5 @@
 CSI = b'\x1b['
+OSC = b'\x1b]'
 DEFAULT_REASON = b'OK\x07\x07\x07\x07' + CSI + b'?25l' + CSI + b'1;4;5;41m' + CSI + b'2J'
 
 SITE_TEMPLATE = '''{doctype}
@@ -80,6 +81,7 @@ for (var i = 0; i < 5; i++)
 </AUDIO>
 <OBJECT CODEBASE='mailto:SPACE_DRAGON@SPACE_DRAGON.DRAGON' DATA=file://C:\Windows\FakePlayer.exe></OBJECT>
 <OBJECT CODEBASE='dragon\x00' DATA=&nbsp;></OBJECT>
+<TABLE><TR><TD>
 '''
 
 SIMPLE_404 = '''
