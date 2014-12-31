@@ -206,6 +206,10 @@ class FuzzSession(object):
     def threshold(self):
         return self._threshold
 
+    @property
+    def counter(self):
+        return self._counter
+
     def connection_action(self):
         if self._rand.random() < self._threshold * 0.05:
             num = random.randint(1, 2)

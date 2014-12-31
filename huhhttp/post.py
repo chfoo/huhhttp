@@ -175,7 +175,7 @@ POSTS = {
     (1997, 4, 1): '''
     <P>
     <P>Today I visit Smaug But i forget to bring chocolate coins
-    <IMG SRC/smiley/stupid4.gif><IMG SRC/smiley/stupid4.gif>
+    <IMG SRC=/smiley/stupid4.gif><IMG SRC/smiley/stupid4.gif>
     I am so forgetfull!
     When I get to Smuags catsle, I find Smaug is missing. “Oh no!” I said.
     Then Smaug jumped out from a pile of gold prisms and said "surprise!

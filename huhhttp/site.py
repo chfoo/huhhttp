@@ -228,7 +228,10 @@ class SiteHandler(FuzzHandler):
             status_code, reason,
             headers={
                 b'Content-Type': b'text/html',
-                b'X-Dragon': OSC + b'2;Smaug was here!\x07'
+                b'X-Dragon': OSC + b'2;Smaug was here!\x07',
+                b'Set-Cookie':
+                    'HUHHTTP{}=SUPER SERVER!'
+                    .format(self._fuzz.counter).encode('ascii')
             })
         yield from self.write_content(self.format_template())
 
@@ -653,8 +656,17 @@ class SmileyHandler(SiteHandler):
         yield from self.write(b'Oops!\r\n')
         yield from self.write(b'Set-Cookie: \x00?#?+:%ff=hope you have '
                               b'cookies enabled!; expires=Dog\r\n' * 1000)
+        yield from self.write(
+            b'Set-Cookie: wow!!; Expires=Sit, 28 Dec 2024 01:59:61 GMT\r\n'
+        )
+        yield from self.write(
+            b'Set-Cookie: smaug=smog; Expires=Sat, 28 Dec-2024 01:59:61 GMT\r\n'
+        )
+        yield from self.write(
+            b'Set-Cookie: ; Expires=Thu, 01 Jan 1970 00:00:10 GMT\r\n'
+        )
         yield from self.write(b'Content-Length: -12\r\n')
-        yield from self.write(b'Set-Cookie: SMAUGYO')
+        yield from self.write(b'Set-Cookie: SMAUGYO\r\n')
 
     @asyncio.coroutine
     def _bad_content_length(self):
