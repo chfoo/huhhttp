@@ -9,6 +9,10 @@ Quick Start
 
 You will need Python 3.4 or greater.
 
+Install:
+
+        pip3 install git+https://github.com/chfoo/huhhttp#egg=huhhttp
+
 Run:
 
         python -m huhhttp --port 8080
