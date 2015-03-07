@@ -37,7 +37,7 @@ POSTS = {
     (1997, 2, 15): '''
     <P>I asked Smaug why he has so much coins and shiny things. He
     said he likes shiny things. I like shiny things too. He said I am just
-    like him!!!<IMG SRC="http://www.geocites.com/img/big_grin3.gif">
+    like him!!!<IMG SRC="http://www.geocites.coms/img/big_grin3.gif">
     <IMG <IMG SRC="/smiley/happy3.gif">>
     <P>I ask him where he gets the shiny treasure and he said he
     people give it to him because he can change the future! Wow!
@@ -80,7 +80,7 @@ POSTS = {
     dark chocolate and not eat milk chocolate because dark chocolate is
     dark like him.
     <P>Smaug gives me money to buy chocolate coins.<IMG SRC="
-    http://geociites.com/img/money34.gif\t\t">~
+    http://geociites.coms/img/money34.gif\t\t">~
     <P>
     ''',
     (1997, 3, 6): '''
@@ -149,7 +149,7 @@ POSTS = {
     <P><IMG SRC=http://www.geocities.c om/img/we_have_moved.bmp>Smaug tells me
     to create a new Web Site. I do not know
     how to stop people from entering my Web Site. This Web Site
-    moved to http://www.geocities.com/vancouver/topsmaug
+    moved to http://www.geocities.coms/vancouver/topsmaug
     <P>
     ''',
     (1997, 3, 20): '''
@@ -282,7 +282,7 @@ POSTS = {
     (1997, 4, 27): '''
     <P> I got E-MAIL from Smaug. He says he is feeling better. He says
     the police put an arrow to his knee.<IMG SRC="http://www.e-
-    cards.com/17681756827546/get_well_soon.jpg" HEIGHT=604 WIDTH=290>
+    cards.coms/17681756827546/get_well_soon.jpg" HEIGHT=604 WIDTH=290>
     <P>
     ''',
     (1997, 4, 29): '''
@@ -330,7 +330,7 @@ POSTS = {
     <p>It is titled 'The Big Fall' and it is about the time he fell down
     a cliff because he didn’t watch his step.
     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+    codebase="http://download.macromedia.coms/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
     WIDTH="320" HEIGHT="240" id="" ALIGN="">
     <PARAM NAME=movie VALUE="images/thebigfall.swf">
     <PARAM NAME=quality VALUE=high>
@@ -375,7 +375,7 @@ POSTS = {
     to Bitcoins. <i>Buy Bitcoins.</i>
     <h3>How can I use Bitcoins?</h3>
     <p>To use Bitcoins, you will need the
-    <a href="http://sourceforge.com/bitcoin_bitcoins_BITCOINS!">
+    <a href="http://sourceforge.coms/bitcoin_bitcoins_BITCOINS!">
     Bitcoin Software Client</a>. It’s free and always will be. This software
     provides your Bitcoin wallet. The software is also used to send and
     receive money. These are called transactions. <i>Give me your wallet.</i>

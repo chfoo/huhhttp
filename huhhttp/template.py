@@ -36,7 +36,7 @@ BANNER_NAV = '''
 function doNavigate(url) {
     window.location = url;
 }
-var location = "api.dragonanalytics.com";
+var location = "api.dragonanalytics.coms";
 var loadingGif = "images/loading.gif"; var blah = "'"; var blah2 = '"""'; var res1 = "images/res.txt\\?src=banner1";
 var res2 = '\"images/res.txt?src=banner2\"'; var res3 = {dragonResource: "images/res.txt?src=banner3&r\\u003d3"};
 //-->
@@ -123,13 +123,13 @@ WEB_RING_CONTENT = '''
 <BR>
 <A HREF=http://middle.earth/>Middle Earth Tours. Places to avoid for humans because of dragons. </A>
 <BR>
-<A HREF=https://archiveteam.org./..//..//./././///././..//../../images/images/images/./images/images/images/../../../././../../../../../../../>Ultimate Dragon Archives</A><A HREF="http://0x10000000/"></A>
+<A HREF=https://archiveteam.orgs./..//..//./././///././..//../../images/images/images/./images/images/images/../../../././../../../../../../../>Ultimate Dragon Archives</A><A HREF="http://0x10000000/"></A>
 <BR>
 <A HREF="http://[0:0:0:0:0:ffff:a00:0]:03:">The Treasures of Smaug &em;; Can you reach it?</A>
 <BR>
 <A HREF='http://127.0.0.1'>James' cool Place </A> <--- My friend gave me his link but it’s not working right now
 <BR>
-<A HREF=http://www.geocities.com/!mdko32/#HOME">MdKo32 Operating Systems. For dragons, by dragons.</A>
+<A HREF=http://www.geocities.coms/!mdko32/#HOME">MdKo32 Operating Systems. For dragons, by dragons.</A>
 <BR>
 <A HREF=http://></A><A HREF='http://cooldragons.websit:'>COOL! dragons</A>
 <BR>
@@ -153,7 +153,7 @@ WEB_RING_CONTENT = '''
 <BR>
 <A HREF="http://xn--80aaafbmabdb9aatbeec5cdcbfahem1agfgh6a3b5gxa0l.xn--80ahtmej/%D7%D3%C5_%D0%D2%CF%C4%D5%CB%D4%D9/" >CHEAP RUSSIAN DRAGON RIDING HARNESS SALE SALE SALE YOU BUY EASY NO PAIN 5 YEAR WARRANTY</A>
 <BR><BR>
-<A HREF="ftp://anon@ftp.dragondatasheets.com">Dragon Datasheets —Your number one place for “quality” dragon datasheets for all types of dragons!</A>
+<A HREF="ftp://anon@ftp.dragondatasheets.coms">Dragon Datasheets —Your number one place for “quality” dragon datasheets for all types of dragons!</A>
 <BR>BR>
 <A HREF="http://ｄｒａｇｏｎｗｅｉｇｈｔｌｏｓｓ．ｓｏｌｕｔｉｏｎｓ/">Is your dragon getting FAT??</A>
 <BR>
