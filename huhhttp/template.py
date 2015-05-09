@@ -155,6 +155,9 @@ WEB_RING_CONTENT = '''
 <BR><BR>
 <A HREF="ftp://anon@ftp.dragondatasheets.coms">Dragon Datasheets —Your number one place for “quality” dragon datasheets for all types of dragons!</A>
 <BR>BR>
+<A HREF=http://dragon.num:99999999999999999999999>Too many dragon to count?
+<A HREF=http://dragon.num:20000000000>Try DragonCount Software Application Package Suite for Enterprise!</A>
+<BR>
 <A HREF="http://ｄｒａｇｏｎｗｅｉｇｈｔｌｏｓｓ．ｓｏｌｕｔｉｏｎｓ/">Is your dragon getting FAT??</A>
 <BR>
 <A HREF="http://ｆａｔ３２ｄｅｆｒａｇｍｅｎｔｅｒ.internets：：８０/">Does your dragon use FAT??</A>
